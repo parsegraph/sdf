@@ -1,8 +1,9 @@
 var assert = require("assert");
-import todo from "../dist/sdf";
+import TinySDF from "../dist/sdf";
 
 describe("Package", function () {
   it("works", ()=>{
-    assert.equal(todo(), 42);
+    const sdf = new TinySDF();
+    assert.ok(sdf.draw("Hello"));
   });
 });
