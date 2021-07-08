@@ -1,0 +1,17 @@
+{
+    "name": "parsegraph-sdf",
+    "version": "1.5.5-dev",
+    "description": "sdf",
+    "main": "dist/parsegraph-sdf.js",
+    "types": "dist/parsegraph-sdf.d.ts",
+    "repository": {
+      "type": "git",
+      "url": "git+ssh://git@github.com/parsegraph/sdf.git"
+    },
+    "author": "Rainback, Inc.",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/parsegraph/sdf/issues"
+    },
+    "homepage": "https://github.com/parsegraph/sdf#readme"
+  }
