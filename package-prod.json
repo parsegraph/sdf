@@ -1,6 +1,6 @@
 {
     "name": "parsegraph-sdf",
-    "version": "1.5.5-dev",
+    "version": "1.5.5",
     "description": "sdf",
     "main": "dist/parsegraph-sdf.js",
     "types": "dist/parsegraph-sdf.d.ts",
