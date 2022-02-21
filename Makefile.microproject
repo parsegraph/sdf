@@ -40,19 +40,21 @@ demo: $(DEST_LIB)
 	cd demo && yarn install && yarn start
 .PHONY: demo
 
+RUN_TEST=npx jest --env=jsdom
+
 check:
-	npx jest
+	$(RUN_TEST)
 .PHONY: check
 
 test: check
 .PHONY: test
 
 autotest:
-	npx jest --watch
+	$(RUN_TEST) --watch
 .PHONY: autotest
 
 coverage:
-	npx jest --coverage --coverageDirectory=dist/coverage --coveragePathIgnorePatterns=demo
+	$(RUN_TEST) --coverage --coverageDirectory=dist/coverage --coveragePathIgnorePatterns=demo
 .PHONY: coverage
 
 prettier:

@@ -1,17 +1,9 @@
 {
   "name": "parsegraph-sdf",
-  "version": "1.5.5-dev",
+  "version": "1.5.5",
   "description": "sdf",
-  "main": "dist/parsegraph-sdf.js",
-  "types": "dist/parsegraph-sdf.d.ts",
-  "scripts": {
-    "coverage": "nyc npm run test",
-    "test": "mocha -r @babel/register -r jsdom-global/register --recursive",
-    "demo": "node demo/demo.js",
-    "autobuild": "webpack --watch --config webpack.config.js",
-    "build": "webpack --config webpack.config.js",
-    "build-prod": "NODE_ENV=production webpack --config webpack.prod.js"
-  },
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/parsegraph/sdf.git"
@@ -22,21 +14,8 @@
     "url": "https://github.com/parsegraph/sdf/issues"
   },
   "homepage": "https://github.com/parsegraph/sdf#readme",
-  "nyc": {
-    "extends": "@istanbuljs/nyc-config-babel",
-    "reporter": [
-      "html"
-    ],
-    "exclude": [
-      "test/**.js",
-      "dist/**.js"
-    ],
-    "reportDir": "dist/coverage"
-  },
-  "dependencies": {
-    "canvas": "^2.6.1"
-  },
   "devDependencies": {
+    "canvas": "^2.6.1",
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.5",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
