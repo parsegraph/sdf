@@ -3,9 +3,27 @@ import TinySDF from ".";
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("demo");
   root.style.position = "relative";
+  const sdf = new TinySDF();
+  sdf.draw("Hello")
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+  const ctx = canvas.getContext("2d");
+
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+  for(let y = 0; y < 12; ++y) {
+    for(let x = 0; x < 12; ++x) {
+      const distanceGlyph = sdf.draw(letters.charAt(y * 12 + x));
+      const imageData = sdf.createImageData(ctx);
+      imageData.data.set(distanceGlyph);
+      ctx.putImageData(imageData, x * 24, y * 32);
+    }
+  }
 
   const container = document.createElement("div");
-  container.innerHTML = `${new TinySDF(18, 6, 1).draw("Hello")}`;
+  container.appendChild(canvas);
   container.style.position = "absolute";
   container.style.left = "0px";
   container.style.top = "0px";
