@@ -23,9 +23,9 @@ export default class TinySDF {
   middle: number;
 
   constructor(
-    fontSize: number,
-    radius: number,
-    cutoff: number,
+    fontSize?: number,
+    radius?: number,
+    cutoff?: number,
     fontFamily?: string,
     fontWeight?: string
   ) {
